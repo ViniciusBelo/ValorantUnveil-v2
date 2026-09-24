@@ -1,7 +1,6 @@
 # ValorantUnveil
 
 **Produzido por Vinicius Belo**  
-Aluno do 5° período de Sistemas de Informação da UNINASSAU
 
 ---
 
