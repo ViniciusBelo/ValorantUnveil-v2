@@ -1,0 +1,48 @@
+2024/06/01 15:36:09 [emerg] 6848#3176: unexpected "}" in C:\nginx-1.26.1/conf/nginx.conf:54
+2024/06/01 15:37:26 [error] 12068#12380: *1 directory index of "C:/Users/Vinícius/Desktop/node/valorant-unveil/public/" is forbidden, client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "localhost"
+2024/06/01 15:37:26 [error] 12068#12380: *1 CreateFile() "C:/Users/Vinícius/Desktop/node/valorant-unveil/public/favicon.ico" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2024/06/01 15:37:28 [error] 12068#12380: *1 directory index of "C:/Users/Vinícius/Desktop/node/valorant-unveil/public/" is forbidden, client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "localhost"
+2024/06/01 15:37:41 [error] 12068#12380: *1 directory index of "C:/Users/Vinícius/Desktop/node/valorant-unveil/public/" is forbidden, client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "localhost"
+2024/06/01 15:37:47 [error] 12068#12380: *1 directory index of "C:/Users/Vinícius/Desktop/node/valorant-unveil/public/" is forbidden, client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "localhost"
+2024/06/01 15:37:47 [error] 12068#12380: *1 directory index of "C:/Users/Vinícius/Desktop/node/valorant-unveil/public/" is forbidden, client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "localhost"
+2024/06/01 15:37:48 [error] 12068#12380: *1 directory index of "C:/Users/Vinícius/Desktop/node/valorant-unveil/public/" is forbidden, client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "localhost"
+2024/06/01 15:40:38 [notice] 12256#14144: signal process started
+2024/06/01 15:40:38 [notice] 12912#11652: signal process started
+2024/06/01 15:40:38 [error] 12912#11652: CreateFile() "C:\nginx-1.26.1/logs/nginx.pid" failed (2: The system cannot find the file specified)
+2024/06/01 15:40:38 [notice] 8176#8972: signal process started
+2024/06/01 15:40:38 [error] 8176#8972: CreateFile() "C:\nginx-1.26.1/logs/nginx.pid" failed (2: The system cannot find the file specified)
+2024/06/01 15:40:38 [notice] 3052#10216: signal process started
+2024/06/01 15:40:38 [error] 3052#10216: CreateFile() "C:\nginx-1.26.1/logs/nginx.pid" failed (2: The system cannot find the file specified)
+2024/06/01 15:42:10 [error] 7960#2268: *1 directory index of "C:/Users/Vinícius/Desktop/node/valorant-unveil/" is forbidden, client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "localhost"
+2024/06/01 15:43:12 [error] 7960#2268: *1 directory index of "C:/Users/Vinícius/Desktop/node/valorant-unveil/" is forbidden, client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "localhost"
+2024/06/01 15:43:55 [notice] 12340#7676: signal process started
+2024/06/01 15:46:49 [error] 13272#7048: *1 directory index of "C:/Users/Vinícius/Desktop/node/valorant-unveil/" is forbidden, client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "localhost"
+2024/06/01 15:46:49 [error] 13272#7048: *1 directory index of "C:/Users/Vinícius/Desktop/node/valorant-unveil/" is forbidden, client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "localhost"
+2024/06/01 15:46:50 [error] 13272#7048: *1 directory index of "C:/Users/Vinícius/Desktop/node/valorant-unveil/" is forbidden, client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "localhost"
+2024/06/01 15:46:50 [error] 13272#7048: *1 directory index of "C:/Users/Vinícius/Desktop/node/valorant-unveil/" is forbidden, client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "localhost"
+2024/06/01 15:46:50 [error] 13272#7048: *1 directory index of "C:/Users/Vinícius/Desktop/node/valorant-unveil/" is forbidden, client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "localhost"
+2024/06/01 15:46:50 [error] 13272#7048: *1 directory index of "C:/Users/Vinícius/Desktop/node/valorant-unveil/" is forbidden, client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "localhost"
+2024/06/01 15:46:50 [error] 13272#7048: *1 directory index of "C:/Users/Vinícius/Desktop/node/valorant-unveil/" is forbidden, client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "localhost"
+2024/06/01 15:48:08 [notice] 9456#1260: signal process started
+2024/06/01 15:54:29 [notice] 12280#11556: signal process started
+2024/06/01 16:12:39 [notice] 7592#10256: signal process started
+2024/06/02 16:40:23 [error] 23692#25464: *1 "C:/Users/Vinícius/Desktop/Testando/valorant-unveil/public/Valohome.html" is not found (3: O sistema n�o pode encontrar o caminho especificado), client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "localhost"
+2024/06/02 16:40:25 [error] 23692#25464: *4 CreateFile() "C:/Users/Vinícius/Desktop/Testando/valorant-unveil/public/favicon.ico" failed (3: O sistema n�o pode encontrar o caminho especificado), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2024/06/02 16:41:53 [error] 23692#25464: *6 "C:/Users/Vinícius/Desktop/Testando/valorant-unveil/public/Valohome.html" is not found (3: O sistema n�o pode encontrar o caminho especificado), client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "localhost"
+2024/06/02 16:41:54 [error] 23692#25464: *6 "C:/Users/Vinícius/Desktop/Testando/valorant-unveil/public/Valohome.html" is not found (3: O sistema n�o pode encontrar o caminho especificado), client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "localhost"
+2024/06/02 16:43:04 [notice] 4544#19292: signal process started
+2024/06/04 19:15:05 [error] 20248#25240: *1 CreateFile() "C:\Users\Vinícius\Desktop\Testando\ValorantUnveil\public/favicon.ico" failed (2: O sistema n�o pode encontrar o arquivo especificado), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2024/06/04 19:28:31 [error] 2480#4104: *1 CreateFile() "C:\Users\Vinícius\Desktop\Testando\ValorantUnveil\public/favicon.ico" failed (2: O sistema n�o pode encontrar o arquivo especificado), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost", referrer: "http://localhost/Valoagents.html"
+2024/06/04 19:43:14 [error] 19976#8288: *17 CreateFile() "C:\Users\Vinícius\Desktop\Testando\ValorantUnveil\public/favicon.ico" failed (2: O sistema n�o pode encontrar o arquivo especificado), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/"
+2024/06/05 00:55:40 [emerg] 19064#13288: "server" directive is not allowed here in C:\Users\Vinícius\Desktop\nginx-1.26.1/conf/nginx.conf:1
+2024/06/05 00:59:28 [error] 1824#17256: *2 CreateFile() "C:/Users/Vinícius/Desktop/minha b/ValorantUnveil/public/favicon.ico" failed (2: O sistema n�o pode encontrar o arquivo especificado), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2024/06/05 01:01:43 [notice] 11360#15120: signal process started
+2024/06/05 01:12:03 [notice] 6136#1924: signal process started
+2024/06/05 01:17:44 [notice] 5496#18680: signal process started
+2024/06/05 01:29:26 [notice] 5628#18000: signal process started
+2024/06/05 01:47:46 [notice] 7476#16960: signal process started
+2024/06/05 01:59:40 [notice] 3084#20404: signal process started
+2024/06/05 02:06:00 [notice] 17340#4252: signal process started
+2024/06/05 02:17:06 [notice] 18824#20168: signal process started
+2024/06/05 02:17:06 [error] 18824#20168: CreateFile() "C:\Users\Vinícius\Desktop\nginx-1.26.1/logs/nginx.pid" failed (2: O sistema n�o pode encontrar o arquivo especificado)
+2024/06/05 03:02:31 [notice] 1856#948: signal process started

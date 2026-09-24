@@ -1,0 +1,25 @@
+# Build Java/Maven
+target/
+*.class
+*.jar
+*.war
+
+# Node
+node_modules/
+
+# Banco H2 local
+data/
+
+# Logs do servidor
+springboot.log
+springboot-err.log
+
+# IDE
+.vscode/
+.idea/
+*.iml
+.metadata/
+
+# OS
+.DS_Store
+Thumbs.db

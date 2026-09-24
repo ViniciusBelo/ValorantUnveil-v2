@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ValorantUnveil — Adicionar Agente</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="Valoagents.css">
+</head>
+<body class="sidebar-open">
+
+    <nav class="menu-lateral expandir">
+        <div class="btn-expandir">
+            <i class="bi bi-list" id="btn-exp"></i>
+        </div>
+        <ul>
+            <li class="item-menu">
+                <a href="Valohome.html">
+                    <span class="icon"><i class="bi bi-mouse2"></i></span>
+                    <span class="txt-link">Home</span>
+                </a>
+            </li>
+            <li class="item-menu">
+                <a href="Valoagents.html">
+                    <span class="icon"><i class="bi bi-person-badge"></i></span>
+                    <span class="txt-link">Agentes</span>
+                </a>
+            </li>
+            <li class="item-menu">
+                <a href="Valomaps.html">
+                    <span class="icon"><i class="bi bi-map"></i></span>
+                    <span class="txt-link">Mapas</span>
+                </a>
+            </li>
+            <li class="item-menu ativo">
+                <a href="Valoform.html">
+                    <span class="icon"><i class="bi bi-plus-circle"></i></span>
+                    <span class="txt-link">Formulário</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="page-content">
+        <div class="page-header">
+            <h1>Adicionar Agente</h1>
+            <p>Contribua com informações sobre novos agentes</p>
+        </div>
+
+        <div class="form-container">
+            <div id="form-feedback" class="form-feedback" style="display:none;"></div>
+
+            <form id="agentForm">
+                <div class="form-group">
+                    <label for="name">Nome do Agente</label>
+                    <input type="text" id="name" name="name" placeholder="Ex: Jett" required minlength="2" maxlength="50">
+                </div>
+                <div class="form-group">
+                    <label for="classe">Classe</label>
+                    <input type="text" id="classe" name="classe" placeholder="Ex: Duelista, Controlador, Iniciador, Sentinela" required minlength="2" maxlength="50">
+                </div>
+                <div class="form-group">
+                    <label for="bio">Biografia</label>
+                    <textarea id="bio" name="bio" placeholder="Descreva o agente, sua origem e estilo de jogo..." required minlength="10" maxlength="500"></textarea>
+                </div>
+                <button type="submit" id="submit-btn">
+                    <i class="bi bi-plus-circle"></i> Adicionar Agente
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script src="Valoform.js"></script>
+</body>
+</html>

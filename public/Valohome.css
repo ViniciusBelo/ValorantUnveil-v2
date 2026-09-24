@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #111;
+    color: #ddd;
+}
+
+/* ─── Sidebar ─── */
+nav.menu-lateral {
+    width: 70px;
+    height: 100vh;
+    background-color: #181818;
+    padding: 20px 0 40px 0;
+    box-shadow: 3px 0 0 #8C0000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    transition: width .35s ease;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+}
+
+nav.menu-lateral.expandir { width: 240px; }
+
+.btn-expandir {
+    padding: 0 0 16px 16px;
+}
+
+.btn-expandir > i {
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    transition: color .2s;
+}
+
+.btn-expandir > i:hover { color: #e55; }
+
+ul { list-style-type: none; flex: 1; }
+
+ul li.item-menu {
+    transition: background .25s;
+    border-radius: 0 30px 30px 0;
+    margin: 2px 8px 2px 0;
+}
+
+ul li.ativo { background-color: #8C0000; }
+ul li.item-menu:hover { background: #6b0000; }
+
+ul li.item-menu a {
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 12px 10px;
+    white-space: nowrap;
+}
+
+ul li.item-menu a .txt-link {
+    margin-left: 14px;
+    font-size: 15px;
+    font-weight: 600;
+    opacity: 0;
+    transition: opacity .25s;
+}
+
+nav.menu-lateral.expandir .txt-link { opacity: 1; }
+
+ul li.item-menu a .icon > i {
+    font-size: 26px;
+    margin-left: 10px;
+}
+
+/* ─── Offset do conteúdo (segue estado da sidebar) ─── */
+.hero,
+.cta-grid,
+.descricao {
+    margin-left: 70px;
+    transition: margin-left .35s ease;
+}
+
+body.sidebar-open .hero,
+body.sidebar-open .cta-grid,
+body.sidebar-open .descricao {
+    margin-left: 240px;
+}
+
+/* ─── Hero ─── */
+.hero {
+    background: linear-gradient(135deg, #1a0000 0%, #111 60%);
+    border-bottom: 1px solid #2a0000;
+    padding: 52px 60px 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: -40px; right: -40px;
+    width: 300px; height: 300px;
+    background: radial-gradient(circle, rgba(140,0,0,0.18) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.hero-title {
+    font-size: 42px;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 1px;
+    line-height: 1.15;
+}
+
+.hero-title span { color: #c0392b; }
+
+.hero-sub {
+    color: #888;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+/* ─── CTA Grid ─── */
+.cta-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 28px 60px 0;
+    justify-content: center;
+}
+
+.cta-card {
+    flex: 1;
+    min-width: 200px;
+    max-width: 280px;
+    background: #181818;
+    border: 1px solid #2a2a2a;
+    border-radius: 12px;
+    padding: 22px 20px;
+    text-decoration: none;
+    color: #ddd;
+    transition: border-color .25s, transform .25s, box-shadow .25s;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.cta-card:hover {
+    border-color: #8C0000;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(140,0,0,0.25);
+}
+
+.cta-card i {
+    font-size: 28px;
+    color: #8C0000;
+    flex-shrink: 0;
+}
+
+.cta-card strong {
+    display: block;
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 2px;
+}
+
+.cta-card span { font-size: 13px; color: #888; }
+
+/* ─── Conteúdo centralizado ─── */
+.descricao {
+    padding: 32px 60px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.secao {
+    width: 100%;
+    max-width: 720px;
+    background: #181818;
+    border: 1px solid #222;
+    border-radius: 12px;
+    padding: 28px 32px;
+    margin-bottom: 20px;
+}
+
+.titulo {
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #8C0000;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.titulo i { color: #8C0000; font-size: 20px; }
+
+.separa {
+    color: #999;
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 14px;
+}
+
+.separa:last-child { margin-bottom: 0; }

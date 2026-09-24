@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ValorantUnveil — Mapas</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="Valoagents.css">
+</head>
+<body class="sidebar-open">
+
+    <nav class="menu-lateral expandir">
+        <div class="btn-expandir">
+            <i class="bi bi-list" id="btn-exp"></i>
+        </div>
+        <ul>
+            <li class="item-menu">
+                <a href="Valohome.html">
+                    <span class="icon"><i class="bi bi-mouse2"></i></span>
+                    <span class="txt-link">Home</span>
+                </a>
+            </li>
+            <li class="item-menu">
+                <a href="Valoagents.html">
+                    <span class="icon"><i class="bi bi-person-badge"></i></span>
+                    <span class="txt-link">Agentes</span>
+                </a>
+            </li>
+            <li class="item-menu ativo">
+                <a href="Valomaps.html">
+                    <span class="icon"><i class="bi bi-map"></i></span>
+                    <span class="txt-link">Mapas</span>
+                </a>
+            </li>
+            <li class="item-menu">
+                <a href="Valoform.html">
+                    <span class="icon"><i class="bi bi-plus-circle"></i></span>
+                    <span class="txt-link">Formulário</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="page-content">
+        <div class="page-header">
+            <h1>Mapas</h1>
+            <p>Explore os cenários de batalha do Valorant</p>
+        </div>
+        <div class="maps-grid" id="maps-container"></div>
+    </div>
+
+    <div class="modal" id="map-modal">
+        <div class="modal-content map-modal-content">
+            <span class="close map-close">&times;</span>
+            <div class="map-modal-img-wrap">
+                <img id="modal-map-img" src="" alt="">
+                <div class="map-modal-img-overlay">
+                    <h2 id="modal-map-name"></h2>
+                    <span class="location-badge"><i class="bi bi-geo-alt-fill"></i> <span id="modal-map-location"></span></span>
+                </div>
+            </div>
+            <div class="map-modal-body">
+                <p id="modal-map-description" class="map-description"></p>
+                <div class="map-tactical" id="modal-map-tactical-wrap">
+                    <span class="section-label"><i class="bi bi-crosshair"></i> Característica Tática</span>
+                    <p id="modal-map-tactical"></p>
+                </div>
+                <div id="modal-map-callouts-wrap">
+                    <span class="section-label"><i class="bi bi-pin-map"></i> Pontos do Mapa</span>
+                    <div id="modal-map-callouts" class="callouts-container"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="loading" class="loading-overlay" style="display:none;">
+        <div class="spinner"></div>
+    </div>
+
+    <script src="Valomaps.js"></script>
+</body>
+</html>

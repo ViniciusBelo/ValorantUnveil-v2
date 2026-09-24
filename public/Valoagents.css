@@ -1,0 +1,552 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #111;
+    color: #ddd;
+}
+
+/* ─── Sidebar ─── */
+nav.menu-lateral {
+    width: 70px;
+    height: 100vh;
+    background-color: #181818;
+    padding: 20px 0 40px 0;
+    box-shadow: 3px 0 0 #8C0000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    transition: width .35s ease;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+}
+
+nav.menu-lateral.expandir {
+    width: 240px;
+}
+
+.btn-expandir {
+    padding: 0 0 16px 16px;
+}
+
+.btn-expandir > i {
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    transition: color .2s;
+}
+
+.btn-expandir > i:hover { color: #e55; }
+
+ul {
+    list-style-type: none;
+    flex: 1;
+}
+
+ul li.item-menu {
+    transition: background .25s;
+    border-radius: 0 30px 30px 0;
+    margin: 2px 8px 2px 0;
+}
+
+ul li.ativo { background-color: #8C0000; }
+ul li.item-menu:hover { background: #6b0000; }
+
+ul li.item-menu a {
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 12px 10px;
+    white-space: nowrap;
+}
+
+ul li.item-menu a .txt-link {
+    margin-left: 14px;
+    font-size: 15px;
+    font-weight: 600;
+    opacity: 0;
+    transition: opacity .25s;
+}
+
+nav.menu-lateral.expandir .txt-link { opacity: 1; }
+
+ul li.item-menu a .icon > i {
+    font-size: 26px;
+    margin-left: 10px;
+}
+
+/* ─── Layout geral (offset segue estado da sidebar) ─── */
+.page-content {
+    margin-left: 70px;
+    transition: margin-left .35s ease;
+    padding: 0 0 40px 0;
+}
+
+body.sidebar-open .page-content {
+    margin-left: 240px;
+}
+
+.page-header {
+    padding: 36px 30px 20px;
+    border-bottom: 1px solid #222;
+    margin-bottom: 10px;
+}
+
+.page-header h1 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+.page-header h1::after {
+    content: '';
+    display: block;
+    width: 48px;
+    height: 3px;
+    background: #8C0000;
+    margin-top: 8px;
+    border-radius: 2px;
+}
+
+.page-header p {
+    color: #888;
+    font-size: 15px;
+    margin-top: 6px;
+}
+
+/* ─── Grid de Agentes ─── */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    padding: 20px 24px;
+}
+
+.card {
+    position: relative;
+    width: calc(25% - 16px);
+    min-width: 160px;
+    max-width: 240px;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    border: 2px solid #2a2a2a;
+    background: #181818;
+    transition: transform .25s, border-color .25s, box-shadow .25s;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    border-color: #8C0000;
+    box-shadow: 0 10px 28px rgba(140, 0, 0, 0.35);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.card-name {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(140, 0, 0, 0.9));
+    color: #fff;
+    text-align: center;
+    padding: 30px 8px 10px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: .5px;
+}
+
+/* ─── Modal Agentes ─── */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 200;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.75);
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn .2s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+.modal-content {
+    background: #1c1c1c;
+    border: 1px solid #2e2e2e;
+    width: 90%;
+    max-width: 680px;
+    border-radius: 14px;
+    overflow: hidden;
+    animation: slideUp .25s ease;
+    position: relative;
+}
+
+@keyframes slideUp {
+    from { transform: translateY(24px); opacity: 0; }
+    to   { transform: translateY(0);    opacity: 1; }
+}
+
+.close {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    color: #888;
+    font-size: 26px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color .2s;
+    z-index: 10;
+    line-height: 1;
+}
+.close:hover { color: #e55; }
+
+#agent-info {
+    display: flex;
+}
+
+.modal-img-wrap {
+    flex-shrink: 0;
+    width: 200px;
+    background: linear-gradient(160deg, #1a0000, #2e0505);
+}
+
+.modal-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.modal-text {
+    padding: 28px 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 12px;
+    flex: 1;
+}
+
+.modal-text h2 {
+    font-size: 26px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.classe-badge {
+    display: inline-block;
+    background: #8C0000;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    width: fit-content;
+}
+
+.modal-text p {
+    color: #aaa;
+    font-size: 14px;
+    line-height: 1.75;
+}
+
+/* ─── Grid de Mapas ─── */
+.maps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 16px;
+    padding: 20px 24px;
+}
+
+.map-card {
+    position: relative;
+    height: 190px;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    background-size: cover;
+    background-position: center top;
+    border: 2px solid #2a2a2a;
+    transition: transform .25s, border-color .25s, box-shadow .25s;
+}
+
+.map-card:hover {
+    transform: translateY(-5px);
+    border-color: #8C0000;
+    box-shadow: 0 10px 28px rgba(140, 0, 0, 0.35);
+}
+
+.map-card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.88));
+    padding: 40px 14px 14px;
+}
+
+.map-card-name {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.map-card-location {
+    color: #bbb;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-top: 2px;
+}
+
+/* ─── Modal Mapas ─── */
+.map-modal-content {
+    max-width: 780px;
+    overflow-y: auto;
+    max-height: 90vh;
+}
+
+.map-modal-img-wrap {
+    position: relative;
+    height: 220px;
+    overflow: hidden;
+}
+
+.map-modal-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+}
+
+.map-modal-img-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0,0,0,0.85));
+    padding: 40px 22px 18px;
+}
+
+.map-modal-img-overlay h2 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.location-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    color: #ccc;
+    font-size: 13px;
+    margin-top: 4px;
+}
+
+.map-modal-body {
+    padding: 22px 24px 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.map-description {
+    color: #aaa;
+    font-size: 14px;
+    line-height: 1.75;
+}
+
+.section-label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #8C0000;
+    margin-bottom: 8px;
+}
+
+.map-tactical p {
+    color: #bbb;
+    font-size: 14px;
+    line-height: 1.7;
+    padding: 10px 14px;
+    background: #161616;
+    border-left: 3px solid #8C0000;
+    border-radius: 0 6px 6px 0;
+}
+
+.callouts-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.callout-tag {
+    background: #222;
+    border: 1px solid #333;
+    color: #ccc;
+    font-size: 12px;
+    padding: 4px 10px;
+    border-radius: 20px;
+    transition: background .2s, border-color .2s;
+}
+
+.callout-tag:hover {
+    background: #8C0000;
+    border-color: #8C0000;
+    color: #fff;
+}
+
+/* ─── Loading ─── */
+.loading-overlay {
+    position: fixed;
+    z-index: 300;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.55);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.spinner {
+    width: 44px;
+    height: 44px;
+    border: 4px solid #2a2a2a;
+    border-top-color: #8C0000;
+    border-radius: 50%;
+    animation: spin .7s linear infinite;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ─── Erro ─── */
+.error-msg {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 60px 20px;
+    color: #888;
+}
+
+.error-msg i {
+    font-size: 40px;
+    color: #8C0000;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.error-msg p { font-size: 16px; line-height: 1.6; }
+
+/* ─── Formulário (mantido para compatibilidade) ─── */
+.form-container {
+    max-width: 540px;
+    margin: 30px auto 40px 30px;
+    background: #1c1c1c;
+    border: 1px solid #2a2a2a;
+    border-radius: 12px;
+    padding: 32px 36px;
+}
+
+.titulo {
+    font-size: 22px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 24px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #8C0000;
+}
+
+.form-group { margin-bottom: 18px; }
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    color: #bbb;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px 14px;
+    background: #111;
+    border: 1px solid #2e2e2e;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 14px;
+    transition: border-color .2s;
+    outline: none;
+}
+
+input:focus, textarea:focus { border-color: #8C0000; }
+textarea { resize: vertical; min-height: 100px; }
+
+button[type="submit"] {
+    width: 100%;
+    padding: 11px;
+    border: none;
+    border-radius: 6px;
+    background: #8C0000;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: background .2s, opacity .2s;
+}
+
+button[type="submit"]:hover { background: #a80000; }
+button[type="submit"]:disabled { opacity: .55; cursor: not-allowed; }
+
+.form-feedback {
+    padding: 11px 14px;
+    border-radius: 6px;
+    font-size: 13px;
+    margin-bottom: 18px;
+}
+
+.form-feedback.success {
+    background: rgba(0, 160, 80, 0.12);
+    border: 1px solid rgba(0, 160, 80, 0.35);
+    color: #4caf80;
+}
+
+.form-feedback.error {
+    background: rgba(140, 0, 0, 0.12);
+    border: 1px solid rgba(140, 0, 0, 0.35);
+    color: #e57373;
+}

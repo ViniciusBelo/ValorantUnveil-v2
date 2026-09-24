@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ValorantUnveil — Agentes</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="Valoagents.css">
+</head>
+<body class="sidebar-open">
+
+    <nav class="menu-lateral expandir">
+        <div class="btn-expandir">
+            <i class="bi bi-list" id="btn-exp"></i>
+        </div>
+        <ul>
+            <li class="item-menu">
+                <a href="Valohome.html">
+                    <span class="icon"><i class="bi bi-mouse2"></i></span>
+                    <span class="txt-link">Home</span>
+                </a>
+            </li>
+            <li class="item-menu ativo">
+                <a href="Valoagents.html">
+                    <span class="icon"><i class="bi bi-person-badge"></i></span>
+                    <span class="txt-link">Agentes</span>
+                </a>
+            </li>
+            <li class="item-menu">
+                <a href="Valomaps.html">
+                    <span class="icon"><i class="bi bi-map"></i></span>
+                    <span class="txt-link">Mapas</span>
+                </a>
+            </li>
+            <li class="item-menu">
+                <a href="Valoform.html">
+                    <span class="icon"><i class="bi bi-plus-circle"></i></span>
+                    <span class="txt-link">Formulário</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="page-content">
+        <div class="page-header">
+            <h1>Agentes</h1>
+            <p>Escolha seu estilo de jogo</p>
+        </div>
+        <div class="container" id="agents-container"></div>
+    </div>
+
+    <div class="modal" id="agent-info-modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="agent-info">
+                <div class="modal-img-wrap">
+                    <img id="modal-agent-img" src="" alt="">
+                </div>
+                <div class="modal-text">
+                    <h2 id="modal-agent-name"></h2>
+                    <span class="classe-badge" id="modal-agent-classe"></span>
+                    <p id="modal-agent-bio"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="loading" class="loading-overlay" style="display:none;">
+        <div class="spinner"></div>
+    </div>
+
+    <script src="Valohome.js"></script>
+</body>
+</html>
